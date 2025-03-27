@@ -4,6 +4,20 @@
     <title>CO2 App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="">
+    <style>
+        .rectangle {
+            display: inline-block; /* Makes span behave like a block element */
+            width: 300px;          /* Set width for the rectangle */
+            height: 300px;         /* Set height for the rectangle */
+            background-color: #3498db; /* Set background color */
+            color: white;          /* Set text color */
+            text-align: center;    /* Center the text horizontally */
+            line-height: 150px;    /* Center the text vertically */
+            border-radius: 10px;   /* Optional: rounded corners */
+            font-size: 40px;       /* Font size */
+            font-weight: bold;     /* Font weight */
+        }
+    </style>
 </head>
 <body>
   <h1>CO2 målinger</h1>
@@ -11,7 +25,7 @@
   <button id="disconnectBleButton">Disconnect CO2 måler</button>
   <p>BLE state: <strong><span id="bleState" style="color:#d13a30;">Disconnected</span></strong></p>
   <h2>CO2 værdi:</h2>
-  <p><span id="valueContainer">NaN</span></p>
+  <p><span id="valueContainer" class="rectangle">NaN</span></p>
   <p>Last reading: <span id="timestamp"></span></p>
 </body>
 <script>
